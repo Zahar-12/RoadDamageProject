@@ -1,0 +1,13 @@
+train: data/raw/train/images
+val: data/raw/valid/images
+test: data/raw/test/images
+
+nc: 5
+names: ['0', '1', '2', '3', '4']
+
+roboflow:
+  workspace: zahar12s-workspace
+  project: rdd2022-22jrg-9lmbk
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/zahar12s-workspace/rdd2022-22jrg-9lmbk/dataset/1

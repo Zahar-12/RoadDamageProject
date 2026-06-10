@@ -1,0 +1,21 @@
+dataset_path: data/raw
+
+results_path: results
+
+models:
+  yolov8n: src/models/yolov8n/best.pt
+  yolo11n: src/models/yolov11n/best.pt
+  yolo26: src/models/yolo26n/best.pt
+  faster_rcnn: src/models/faster_rcnn/best_model.pth
+  ssd: src/models/ssd/best_model.pth
+  detr: src/models/detr/best_model.pth
+
+training:
+  epochs: 30
+  batch_size: 16
+  seed: 42
+
+results:
+  metrics: results/metrics.json
+  plots: results/plots
+  logs: results/logs
