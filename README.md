@@ -2,7 +2,7 @@
 
 ---
 
-<img src="photo_readme/photo.png" width="700"/>
+<img src="photo_readme/head.png" width="700"/>
 
 ---
 
@@ -53,27 +53,85 @@ RoadDamageProject/
 │   └── default.yaml
 ├── data/
 │   ├── raw/
+│   │   ├── test/
+│   │   ├── train/
+│   │   ├── valid/
+│   │   ├── data.yaml
+│   │   └── README.roboflow.txt
 │   └── processed/
 ├── src/
-│   ├── dataset/
 │   ├── models/
 │   │   ├── yolov8n/
+│   │   │   └── best.pt
 │   │   ├── yolov11n/
+│   │   │   └── best.pt
 │   │   ├── yolo26/
+│   │   │   └── best.pt
 │   │   ├── ssd/
+│   │   │   └── best_model.pth
 │   │   ├── faster_rcnn/
+│   │   │   └── best_model.pth
 │   │   └── detr/
-│   ├── training/
-│   ├── evaluation/
-│   └── utils/
+│   │       └── best_model.pth
+│   └── evaluation/
+│       ├── compare_models.py
+│       ├── metrics.py
+│       └── plot_metrics.py
 ├── notebooks/
+│   ├── metrics.ipynb
+│   ├── plots_loss.ipynb
+│   └── study.ipynb
+├── photo_readme/
+│   └── head.png
 ├── results/
+│   ├── metrics/
+│   │   ├── detr.png
+│   │   ├── faster_rcnn.png
+│   │   ├── ssd.png
+│   │   ├── yolo11n.png
+│   │   ├── yolo26n.png
+│   │   └── yolov8n.png
 │   ├── plots/
-│   ├── logs/
+│   │   ├── comparison/
+│   │   │   ├── mAP50_comparison.png
+│   │   │   ├── precision_comparison.png
+│   │   │   └── recall_comparison.png
+│   │   └── loss/
+│   │       ├── detr_loss.png
+│   │       ├── faster_rcnn_loss.png
+│   │       ├── ssd_loss.png
+│   │       ├── yolo11n_loss.png
+│   │       ├── yolo26n_loss.png
+│   │       └── yolov8n_loss.png
+│   ├── predictions/
+│   │   ├── detr/
+│   │   │   ├── detr_photo_1.png
+│   │   │   ├── detr_photo_2.png
+│   │   │   └── detr_photo_3.png
+│   │   ├── faster_rcnn/
+│   │   │   ├── faster_rcnn_photo_1.png
+│   │   │   ├── faster_rcnn_photo_2.png
+│   │   │   └── faster_rcnn_photo_3.png
+│   │   ├── ssd/
+│   │   │   ├── SSD_photo_1.png
+│   │   │   ├── SSD_photo_2.png
+│   │   │   └── SSD_photo_3.png
+│   │   ├── yolo11n/
+│   │   │   ├── yolo11n_photo_1.png
+│   │   │   ├── yolo11n_photo_2.png
+│   │   │   └── yolo11n_photo_3.png
+│   │   ├── yolo26n/
+│   │   │   ├── yolo26n_photo_1.png
+│   │   │   ├── yolo26n_photo_2.png
+│   │   │   └── yolo26n_photo_3.png
+│   │   └── yolov8n/
+│   │       ├── yolov8n_photo_1.png
+│   │       ├── yolov8n_photo_2.png
+│   │       └── yolov8n_photo_3.png
 │   └── metrics.json
 ├── main.py
 ├── requirements.txt
-├── setup.py
+├── .gitignore
 └── README.md
 ```
 ---
@@ -133,15 +191,15 @@ RoadDamageProject/
 
 **Recall Comparison**
 
-<img src="results/plots/recall_comparison.png" width="700"/>
+<img src="results/plots/comparison/recall_comparison.png" width="700"/>
 
 **Precision Comparison**
 
-<img src="results/plots/precision_comparison.png" width="700"/>
+<img src="results/plots/comparison/precision_comparison.png" width="700"/>
 
 **mAP50 Comparison**
 
-<img src="results/plots/mAP50_comparison.png" width="700"/>
+<img src="results/plots/comparison/mAP50_comparison.png" width="700"/>
 
 ---
 
